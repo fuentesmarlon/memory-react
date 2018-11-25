@@ -12,7 +12,8 @@ class Game extends React.Component {
           ],
           baraja: [],
           barajaFinal: [],
-          escogidos: []
+          escogidos: [],
+          victoria:0
         }
         this.start()
       }

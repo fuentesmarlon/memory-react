@@ -1,0 +1,76 @@
+body {
+    background-image: url("./img/bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+  }
+  
+  #app {
+    padding: 100px;
+    width: 50%;
+    margin: auto;
+    border-radius: 10px;
+    
+  }
+  #app .game {
+    display: grid;
+    grid-template-columns: auto  auto auto auto;
+    width: 300px;
+    height: 10px;
+  padding: 10px;
+
+  }
+  #app .game .card {
+    height: 150px;
+    width: 150px;
+    height: 150px;
+    margin: 15px;
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    transform-origin : center center;
+  position: relative;
+  }
+  #app .game .card div {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: 0.6s;
+  }
+  #app .game .card .front {
+    font-size: 50px;
+    line-height: 120px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #app .game .card .back {
+    transform: rotateY(180deg);
+    line-height: 110px;
+  }
+  #app .game .card .back img {
+    vertical-align: middle;
+    width: 70%;
+  }
+  #app .game .card.opened {
+    transform: rotateY(180deg);
+  }
+ /* #app .game .card.matched {
+    transform: rotateY(180deg);
+  }*/
+  #app .game .card.matched .back {  
+    animation: selected 0.8s 0s ease 1;
+    animation-fill-mode: both;
+  }
+ #app:hover .card{
+    -webkit-transform: rotateX(20deg);
+    transform: rotateX(20deg);
+    box-shadow: 0 20px 20px rgba(50,50,50,.2);
+ }
+
+

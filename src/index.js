@@ -11,7 +11,6 @@ class Game extends React.Component {
               'cartaA.png','cartaJ.png','cartaK.png','cartaQ.png','carta2.png','carta3.png','carta4.png','carta5.png'
           ],
           baraja: [],
-          mezclada: [],
           barajaFinal: [],
           escogidos: []
         }
@@ -62,8 +61,7 @@ class Game extends React.Component {
       start(){
         let barajaFinal = [];
         this.state.baraja = this.state.mediaBaraja.concat(this.state.mediaBaraja)
-        this.state.mezclada = this.state.baraja
-        this.state.mezclada.map((name,index) => {
+        this.state.baraja.map((name,index) => {
           barajaFinal.push({
             name,
             close: true,
